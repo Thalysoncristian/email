@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Relatório de Atendimentos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <img src="https://gms.stte.com.br/gms_rno/images/logo.jpg" alt="STTE Logo" class="logo" onerror="this.style.display='none'">
+
+        <h1>Gerador de Relatório de Atendimentos</h1>
+
+        <div class="form-section">
+            <label for="dataPlantao">Data do Plantão:</label>
+            <input type="date" id="dataPlantao">
+
+            <label for="responsavel">Responsável:</label>
+            <input type="text" id="responsavel" placeholder="Nome do responsável">
+
+            <label for="caixasSelecionadas">Caixas Selecionadas:</label>
+            <input type="text" id="caixasSelecionadas" placeholder="INFRA_PA/IE_PA/INFRA_AP">
+
+            <label for="designadosPA">Quantidade de designados PA:</label>
+            <input type="number" id="designadosPA" value="0">
+
+            <label for="designadosAP">Quantidade de designados AP:</label>
+            <input type="number" id="designadosAP" value="0">
+
+            <label for="passandoPlantao">Passando plantão para:</label>
+            <input type="text" id="passandoPlantao" placeholder="Nome do próximo responsável">
+
+            <h3>Adicionar Atendimentos</h3>
+            <div id="atendimentosContainer">
+                <div class="atendimento">
+                    <label for="site">SITE:</label>
+                    <input type="text" class="site" placeholder="Nome do site">
+                    
+                    <label for="ami">AMI:</label>
+                    <input type="text" class="ami" placeholder="Código AMI">
+
+                    <label for="tecnicoAcionado">TÉCNICO ACIONADO:</label>
+                    <input type="text" class="tecnicoAcionado" placeholder="Nome do técnico">
+
+                    <label for="status">STATUS:</label>
+                    <input type="text" class="status" placeholder="Status do atendimento">
+
+                    <label for="observacao">OBS.:</label>
+                    <textarea class="observacao" placeholder="Observações"></textarea>
+                </div>
+            </div>
+
+            <button id="adicionarAtendimento">Adicionar Atendimento</button>
+
+            <button id="gerarRelatorio">Gerar Relatório</button>
+        </div>
+
+        <button id="theme-toggle">Alternar Tema</button>
+
+        <div class="report-section" id="relatorio">
+            <!-- O relatório será gerado aqui -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
